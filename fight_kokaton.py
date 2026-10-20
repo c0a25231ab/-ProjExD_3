@@ -152,7 +152,7 @@ class Score:
         self.score = 0
         self.txt = self.fonto.render(f"score:{self.score}",0,(0,0,255))
         self.rct = self.txt.get_rect()
-        self.rct.center = 100, 50
+        self.rct.center = 100, HEIGHT - 50
 
     def update(self, score: int, screen: pg.Surface):
         """
