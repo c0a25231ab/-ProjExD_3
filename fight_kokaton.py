@@ -178,14 +178,7 @@ def main():
     bombs = []
     for _ in range(NUM_OF_BOMBS):
         bombs.append(Bomb((255,0,0),10))
-<<<<<<< HEAD
     beam = None  # ゲーム初期化時にはビームは存在しない
-=======
-    beams = []   
-    for _ in range(NUM_OF_BEAMS):
-        beams.append(None)# ゲーム初期化時にはビームは存在しない
-
->>>>>>> beams
     clock = pg.time.Clock()
     score = Score(screen)
     tmr = 0
@@ -210,16 +203,10 @@ def main():
                 return
 
         for i,bomb in enumerate(bombs):
-<<<<<<< HEAD
             if beam is not None:
                 if beam.rct.colliderect(bomb.rct): # ビームと爆弾が衝突したら，爆弾を消す
                     score.update(1, screen) # スコアを更新
                     beam = None
-=======
-            for j, beam in enumerate(beams):
-                if beam is not None and beam.rct.colliderect(bomb.rct): # ビームと爆弾が衝突したら，爆弾を消す
-                    beams[j] = None
->>>>>>> beams
                     bombs[i] = None
                     bird.change_img(9, screen)
                     pg.display.update()
