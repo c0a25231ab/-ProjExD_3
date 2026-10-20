@@ -218,7 +218,7 @@ def main():
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
         for beam in beams:
-            beam.update(screen,beams) #画面外のビームを削除
+            beam.update(screen,beams) #画面外のビームを削除　
         for bomb in bombs:
             bomb.update(screen)
         score.update(0, screen)
